@@ -3,11 +3,11 @@
 import React, { useState,useEffect } from 'react';
 import axios from 'axios';
 
-const userSurvey = () => {
+const UserSurvey = () => {
     const baseUrl = window.location.origin;
     const [data,setData] = useState([]);
     const fetchData = async () => {
-        const result = await axios('/api/user/userSurvey');
+        const result = await axios('/api/user/UserSurvey');
         // Check if result.data is an array
         if (Array.isArray(result.data.data)) {
           setData(result.data.data);
@@ -54,4 +54,4 @@ const userSurvey = () => {
       );
 };
 
-export default userSurvey;
+export default UserSurvey;
